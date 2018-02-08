@@ -1,0 +1,26 @@
+.cont-left {
+    padding: 20px;
+}
+a:hover {
+    color: #92313a;
+    text-decoration: underline;
+}
+a {
+    color: #5a1c22;
+    /* font-weight: 450; */
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.cont-left {
+    padding: 20px;
+    background: #f7f7f7;
+    border-right: 1px solid #f1efef;
+    max-width: 352px;
+}
+.cont-center {
+	padding: 20px;
+}
+.card {
+	min-height: 550px; 
+}
