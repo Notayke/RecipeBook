@@ -5,14 +5,21 @@
 	   </button>
 	   <div class="collapse navbar-collapse" id="navbarColor01">
 		  <ul class="navbar-nav mr-auto">
-			 <!--<li class="nav-item active">
-				<a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
-			 </li> -->
+		  <?php if(User::checkAuth()) {?>
+			 <li class="nav-item">
+				<a class="nav-link" href="#">Добавить рецепт</a>
+			 </li>
+			 <li class="nav-item">
+				<a class="nav-link" id="exit" href="#">Выйти</a>
+			 </li>
+		  <?php }?>
 		  </ul>
-		  <form class="form-inline">
-			 <input class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login">
-			 <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
-			 <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Войти</button>
+		  <?php if(!User::checkAuth()) {?>
+		  <form id="loginForm" class="form-inline">
+			 <input id="login" class="form-control mr-sm-2" type="text" placeholder="Login" aria-label="Login">
+			 <input id="password" class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
+			 <button id="loginButton" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Войти</button>
 		  </form>
+		  <?php }?>
 	   </div>
 	</nav>
